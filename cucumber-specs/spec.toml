@@ -1,0 +1,9 @@
+context="""
+- This project is intended to master the DSA concepts and advanced from beginner level
+- This project will contain the cucumber specifications different algorithms such as sorting, searching etc inside cucumber-specs directory 
+- This project is intended to contain algorithm implementations in multiple languages such as Java, Rust etc
+- So the individual implementations will load the cucumber specs from cucumber-specs dirrectory and run the algorithms
+"""
+java-project="""
+  Generate a Java based maven project inside folder "java-implementations" besides "cucumber-specs" folder which will implement cucumber specifications steps, right now these steps should be empty with no implementations!
+"""
