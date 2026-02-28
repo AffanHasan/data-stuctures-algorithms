@@ -24,7 +24,7 @@ public class RecursivelyCalculateTheSumOfNumbersSteps {
       final int[] numbers = Arrays.stream(this.numbers.split(","))
         .mapToInt(Integer::parseInt)
         .toArray();
-      sum = recursiveSum(numbers);
+      sum = recursiveSum(numbers, 0);
     }
 
     @Then("the result should be {string}")
@@ -32,14 +32,14 @@ public class RecursivelyCalculateTheSumOfNumbersSteps {
       assert sum == Integer.parseInt(expectedResult);
     }
 
-    private int recursiveSum(int[] numbers) {
+    private int recursiveSum(int[] numbers, int startIndex) {
       // base case
-      if (numbers.length == 1) {
-        return numbers[0];
+      if (startIndex + 1 == numbers.length) {
+        return numbers[startIndex];
       }
       // recursive case
-      else if (numbers.length > 1) {
-        return numbers[0] + recursiveSum(Arrays.copyOfRange(numbers, 1, numbers.length));
+      else if (startIndex + 1 < numbers.length) {
+        return numbers[startIndex] + recursiveSum(numbers, startIndex + 1);
       } else {
         return 0;
       }
