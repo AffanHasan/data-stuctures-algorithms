@@ -14,7 +14,7 @@ public class RecursivelyCalculateTheSumOfNumbersSteps {
     private String numbers = null;
     private int sum;
 
-    @Given("a list of numbers {string}")
+    @Given("a list of numbers {string} for sum calculation")
     public void a_list_of_numbers(String numbers) {
       this.numbers = numbers;
     }
@@ -27,7 +27,7 @@ public class RecursivelyCalculateTheSumOfNumbersSteps {
       sum = recursiveSum(numbers, 0);
     }
 
-    @Then("the result should be {string}")
+    @Then("the calculated sum should be {string}")
     public void the_result_should_be(String expectedResult) {
       assert sum == Integer.parseInt(expectedResult);
     }
