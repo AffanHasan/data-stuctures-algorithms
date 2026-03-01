@@ -12,3 +12,8 @@ Feature: Recursion Algorithms
     Given a list of items "5,10,15,20,25,30" to count
     When the recursive count algorithm is applied
     Then the element count should be "6"
+
+  Scenario: Recursively find the largest number in an array
+    Given an array of integers "3,1,4,1,5,9,2,6,5,3,5" to find max
+    When the recursive max algorithm is applied
+    Then the largest number should be "9"
