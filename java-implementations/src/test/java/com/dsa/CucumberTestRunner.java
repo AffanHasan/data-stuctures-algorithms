@@ -14,7 +14,7 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.dsa.steps.sorting,com.dsa.steps.recursion")
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.dsa.steps.sorting,com.dsa.steps.recursion,com.dsa.steps.twopointer")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, html:target/cucumber-report.html")
 public class CucumberTestRunner {
 }
